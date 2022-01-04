@@ -37,14 +37,14 @@ const List = ({ state }) => {
 export default connect(List);
 
 const Container = styled.section`
-  width: 800px;
+  width: 100%;
   margin: 0;
   padding: 24px;
   list-style: none;
 `;
 
 const Header = styled.h3`
-  font-weight: 300;
+  font-weight: 100;
   text-transform: capitalize;
   color: rgba(12, 17, 43, 0.9);
 `;

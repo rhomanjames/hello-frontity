@@ -18,20 +18,20 @@ const settings = {
               "/"
             ],
             [
-              "Nature",
-              "/category/nature/"
+              "About",
+              "/category/about/"
             ],
             [
-              "Travel",
+              "Brands",
               "/category/travel/"
             ],
             [
-              "Japan",
-              "/tag/japan/"
+              "Career",
+              "/career/"
             ],
             [
-              "About Us",
-              "/about-us/"
+              "Sales",
+              "/sales/"
             ]
           ],
           "featured": {
@@ -45,7 +45,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org"
+          "url": "https://northamericanplastics697336576.wordpress.com"
         }
       }
     },

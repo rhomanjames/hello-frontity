@@ -5,6 +5,7 @@ import List from "./list";
 import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
+import Career from "./career";
 import PageError from "./page-error";
 
 /**
@@ -18,6 +19,8 @@ import PageError from "./page-error";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
+
+  console.log(data)
 
   return (
     <>
@@ -42,6 +45,7 @@ const Theme = ({ state }) => {
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
+          <Career when={state.router.link=='/career/'} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
@@ -56,8 +60,7 @@ export default connect(Theme);
 const globalStyles = css`
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:montserrat;
   }
   a,
   a:visited {
@@ -70,15 +73,16 @@ const HeadContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #1f38c5;
+  background-color: white;
 `;
 
 const Main = styled.div`
   display: flex;
   justify-content: center;
   background-image: linear-gradient(
-    180deg,
-    rgba(66, 174, 228, 0.1),
+    0deg,
+    #f1fff1,
     rgba(66, 174, 228, 0)
   );
 `;
+

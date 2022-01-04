@@ -9,11 +9,12 @@ const Header = ({ state }) => {
       <Container>
         <StyledLink link="/">
           <Title>{state.frontity.title}</Title>
+          <Nav />
+          <MobileMenu />
         </StyledLink>
-        <Description>{state.frontity.description}</Description>
-        <MobileMenu />
+  
       </Container>
-      <Nav />
+    
     </>
   );
 };
@@ -22,11 +23,12 @@ const Header = ({ state }) => {
 export default connect(Header);
 
 const Container = styled.div`
-  width: 848px;
+  width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  background-color: white;
   padding: 24px;
-  color: #fff;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -44,4 +46,6 @@ const Description = styled.h4`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+  display: flex;
+  justify-content: space-between;
 `;

@@ -22,17 +22,17 @@ const Item = ({ state, item }) => {
 
       <div>
         {/* If the post has an author, we render a clickable author text. */}
-        {author && (
+        {/*{author && (
           <StyledLink link={author.link}>
             <AuthorName>
-              By <b>{author.name}</b>
+             <b>{author.name}</b>
             </AuthorName>
           </StyledLink>
-        )}
-        <PublishDate>
+        )}*/}
+        {/*<PublishDate>
           {" "}
           on <b>{date.toDateString()}</b>
-        </PublishDate>
+        </PublishDate>*/}
       </div>
 
       {/*
@@ -55,17 +55,15 @@ const Item = ({ state, item }) => {
 export default connect(Item);
 
 const Title = styled.h1`
-  font-size: 2rem;
-  color: rgba(12, 17, 43);
+  font-size: 3rem;
+  color: black;
   margin: 0;
   padding-top: 24px;
-  padding-bottom: 8px;
-  box-sizing: border-box;
 `;
 
 const AuthorName = styled.span`
-  color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
+  color: black;
+  font-size: 3rem;
 `;
 
 const StyledLink = styled(Link)`
@@ -78,6 +76,7 @@ const PublishDate = styled.span`
 `;
 
 const Excerpt = styled.div`
-  line-height: 1.6em;
-  color: rgba(12, 17, 43, 0.8);
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
 `;
