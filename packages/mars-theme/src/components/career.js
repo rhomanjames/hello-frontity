@@ -49,10 +49,14 @@ const Career = ({ state }) => {
               <JobDiv>
                   <div>
                       <FlexDiv>
-                      <p>Outside Sales Rep</p>
+                          <VertDiv>
+                          <p>Outside Sales Rep</p>
                       <StyledTag>Sales</StyledTag>
+                          </VertDiv>
+                      <VertDiv>
                       <p>Akron, OH</p>
                       <p>Laird Plastics</p>
+                      </VertDiv>
                       </FlexDiv>
                   </div>
               </JobDiv>
@@ -80,6 +84,14 @@ const FlexDiv = styled.div`
 
 `;
 
+const VertDiv = styled.div`
+  width: 100%;
+  text-align: left;
+  justify-content:left;
+  align-items: left;
+
+`;
+
 const StyledButton = styled.button`
   padding: .75rem;
   color: black;
@@ -96,8 +108,7 @@ const StyledTag = styled.button`
   height: fit-content;
   background: green;
   border: 1px solid #f0f0f0;
-  margin-left: 1rem;
-  font-size: .5rem;
+  font-size: .75rem;
   margin-right: 1rem;
   border-radius: 25px;
 `;

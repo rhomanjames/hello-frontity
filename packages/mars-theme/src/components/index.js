@@ -3,6 +3,10 @@ import Switch from "@frontity/components/switch";
 import Header from "./header";
 import List from "./list";
 import Post from "./post";
+import Home from "./home";
+import Brands from "./brands";
+import Sales from "./sales";
+import About from "./about";
 import Loading from "./loading";
 import Title from "./title";
 import Career from "./career";
@@ -45,7 +49,11 @@ const Theme = ({ state }) => {
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
+          <Home when={data.isHome} />
           <Career when={state.router.link=='/career/'} />
+          <Brands when={state.router.link=='/brands/'} />
+          <Sales when={state.router.link=='/sales/'} />
+          <About when={state.router.link=='/about/'} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
@@ -81,7 +89,7 @@ const Main = styled.div`
   justify-content: center;
   background-image: linear-gradient(
     0deg,
-    #f1fff1,
+    #CDEDD5,
     rgba(66, 174, 228, 0)
   );
 `;

@@ -29,6 +29,8 @@ const List = ({ state }) => {
         // Render one Item component for each one.
         return <Item key={item.id} item={item} />;
       })}
+
+
       <Pagination />
     </Container>
   );
