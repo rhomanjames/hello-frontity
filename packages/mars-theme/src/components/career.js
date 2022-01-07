@@ -7,12 +7,12 @@ const Career = ({ state }) => {
   return (
     <>
       <StyledDiv>
+      <Title>Careers</Title>
           <StyledDiv>
-          <h1>Careers</h1>
           <GreenDiv>
-          <p>North American Plastics is the largest distributor of 
+          <h2>North American Plastics is the largest distributor of 
               plastics in North America. With over 115 locations in the US and Canada, we are confident that you can 
-              find a meaningful career with us.</p>
+              find a meaningful career with us.</h2>
           </GreenDiv>
           </StyledDiv>
           <StyledDiv>
@@ -21,18 +21,22 @@ const Career = ({ state }) => {
               <StyledButton title="test">Acquisitions</StyledButton>
 
           </StyledDiv>
-
+          <br></br>
+          <br></br>
           <StyledDiv>
               <h1>Videos</h1>
             <FlexDiv>
                 <StyledDiv>
-                    Video 1
+                <iframe width="280" height="157" src="https://www.youtube.com/embed/EiE-KBQoFTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p><b>Why join us?</b></p>
                 </StyledDiv>
                 <StyledDiv>
-                    Video 2
+                <iframe width="280" height="157" src="https://www.youtube.com/embed/qAt4TpNAZsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p><b>Grow with us!</b></p>
                 </StyledDiv>
                 <StyledDiv>
-                    Video 3
+                <iframe width="280" height="157" src="https://www.youtube.com/embed/P5SiP5SPoNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p><b>Find out who we are</b></p>
                 </StyledDiv>
             </FlexDiv>
           </StyledDiv>
@@ -45,7 +49,6 @@ const Career = ({ state }) => {
                 <StyledButton>Brands</StyledButton>
             </FlexDiv>
           </StyledDiv>
-          <StyledDiv>
               <JobDiv>
                   <div>
                       <FlexDiv>
@@ -54,13 +57,14 @@ const Career = ({ state }) => {
                       <StyledTag>Sales</StyledTag>
                           </VertDiv>
                       <VertDiv>
-                      <p>Akron, OH</p>
+                        <RightDiv>
+                        <p>Akron, OH</p>
                       <p>Laird Plastics</p>
+                        </RightDiv>
                       </VertDiv>
                       </FlexDiv>
                   </div>
               </JobDiv>
-          </StyledDiv>
     
       </StyledDiv>
     
@@ -91,6 +95,11 @@ const VertDiv = styled.div`
   align-items: left;
 
 `;
+const RightDiv = styled.div`
+  text-align: right;
+  padding-right: 3rem;
+
+`;
 
 const StyledButton = styled.button`
   padding: .75rem;
@@ -103,7 +112,7 @@ const StyledButton = styled.button`
 `;
 
 const StyledTag = styled.button`
-  padding: .3rem;
+  padding: .5rem;
   color: white;
   height: fit-content;
   background: green;
@@ -125,6 +134,11 @@ const GreenDiv = styled.div`
     margin-left: auto;
 `;
 
+const Title = styled.h1`
+font-size: 5rem;
+
+`;
+
 
 const JobDiv = styled.div`
     width: 50%;
@@ -137,5 +151,8 @@ const JobDiv = styled.div`
     border-radius: 20px;
     margin-right: auto;
     margin-left: auto;
+    transition: .4s;
+
+    :hover { border: black 1px solid; cursor: pointer}
 `;
 export default connect(Career);

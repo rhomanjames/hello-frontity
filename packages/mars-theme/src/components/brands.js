@@ -8,28 +8,28 @@ const Brands = () => {
             <StyledDiv>
                 <Title>Brands</Title>
                 <FlexDiv>
-                    <Card></Card>
-                    <Card></Card>
-                    <Card></Card>
-                    <Card></Card>
+                    <Card><ULText>View Brand</ULText></Card>
+                    <Card><ULText>View Brand</ULText></Card>
+                    <Card><ULText>View Brand</ULText></Card>
+                    <Card><ULText>View Brand</ULText></Card>
                 </FlexDiv>
                 <FlexDiv>
-                    <Card></Card>
-                    <Card></Card>
-                    <Card></Card>
-                    <Card></Card>
+                    <Card><ULText>View Brand</ULText></Card>
+                    <Card><ULText>View Brand</ULText></Card>
+                    <Card><ULText>View Brand</ULText></Card>
+                    <Card><ULText>View Brand</ULText></Card>
                 </FlexDiv>
                 <FlexDiv>
-                    <Card></Card>
-                    <Card></Card>
-                    <Card></Card>
-                    <Card></Card>
+                    <Card><ULText>View Brand</ULText></Card>
+                    <Card><ULText>View Brand</ULText></Card>
+                    <Card><ULText>View Brand</ULText></Card>
+                    <Card><ULText>View Brand</ULText></Card>
                 </FlexDiv>
                 <FlexDiv>
-                    <Card></Card>
-                    <Card></Card>
-                    <Card></Card>
-                    <Card></Card>
+                    <Card><ULText>View Brand</ULText></Card>
+                    <Card><ULText>View Brand</ULText></Card>
+                    <Card><ULText>View Brand</ULText></Card>
+                    <Card><ULText>View Brand</ULText></Card>
                 </FlexDiv>
             </StyledDiv>
         <StyledDiv>
@@ -42,14 +42,14 @@ const Brands = () => {
                     <BigText>"Joining the NAP family is the best thing that could have happened to LVP."</BigText>
                     <SmallText>Gretchen Mohen, CEO, LeHigh Valley Plastics</SmallText>
                     </GreenDiv>
-                    <ULText>Read Full Testimonial Here</ULText>
+                    <SmallText>Read Full Testimonial Here</SmallText>
                 </StyledDiv>
                 <StyledDiv>
                 <GreenDiv>
                     <BigText>"I have been enabled to run a business with freedom and in a manner that utilizes the full array of resources and market power of NAP in the plastics industry. Best decision ever!"</BigText>
                     <SmallText>Bing J. Carbone, President, Modern Plastics</SmallText>
                     </GreenDiv>
-                <ULText>Read Full Testimonial Here</ULText>
+                <SmallText>Read Full Testimonial Here</SmallText>
                 </StyledDiv>
                     
             </FlexDiv>
@@ -73,10 +73,14 @@ const Card = styled.div`
   height: 200px;
   margin-left: 1rem;
   margin-right: 1rem;
-  padding: .25rem;
   background: black;
   text-align: center;
+  display: flex;
   justify-content: center;
+  transition: .4s;
+  background: nap.png;
+
+  :hover{background: green;}
 
 `;
 
@@ -94,6 +98,19 @@ const SmallText = styled.p`
 const ULText = styled.p`
   font-size: 1rem;
     text-decoration: underline;
+    background: green;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 0;
+    height: 100%;
+    color: white;
+    width: 100%;
+    opacity: 0%;
+    transition: .4s;
+
+    :hover{opacity: 100%;}
+
 `;
 
 const Title = styled.h1`

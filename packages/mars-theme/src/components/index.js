@@ -5,6 +5,7 @@ import List from "./list";
 import Post from "./post";
 import Home from "./home";
 import Brands from "./brands";
+import Laird from "./laird";
 import Sales from "./sales";
 import About from "./about";
 import Loading from "./loading";
@@ -52,6 +53,7 @@ const Theme = ({ state }) => {
           <Home when={data.isHome} />
           <Career when={state.router.link=='/career/'} />
           <Brands when={state.router.link=='/brands/'} />
+          <Laird when={state.router.link=='/laird/'} />
           <Sales when={state.router.link=='/sales/'} />
           <About when={state.router.link=='/about/'} />
           <List when={data.isArchive} />
@@ -87,10 +89,4 @@ const HeadContainer = styled.div`
 const Main = styled.div`
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(
-    0deg,
-    #CDEDD5,
-    rgba(66, 174, 228, 0)
-  );
-`;
-
+  `;

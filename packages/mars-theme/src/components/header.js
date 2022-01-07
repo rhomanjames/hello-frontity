@@ -1,6 +1,7 @@
 import { connect, styled } from "frontity";
 import Link from "./link";
 import Nav from "./nav";
+import NAP from "./images/nap.png";
 import MobileMenu from "./menu";
 
 const Header = ({ state }) => {
@@ -8,7 +9,7 @@ const Header = ({ state }) => {
     <>
       <Container>
         <StyledLink link="/">
-          <Title>North American Plastics</Title>
+        <Logo src={NAP} />
           <Nav />
           <MobileMenu />
         </StyledLink>
@@ -27,11 +28,17 @@ const Container = styled.div`
   max-width: 100%;
   box-sizing: border-box;
   background-color: white;
-  padding: 24px;
+  padding: 3rem;
   color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+`;
+
+const Logo = styled.img`
+  width: 300px;
+  height: auto
+  
 `;
 
 const Title = styled.h2`
