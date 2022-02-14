@@ -1,69 +1,76 @@
 import { connect, styled, css } from "frontity";
 import HomePic from "./images/homepic.png";
-import AboutImg from "./images/aboutpageimg.png";
-import Brands from "./images/brands.png";
+import NA from "./images/NAPic.png";
 
 
 
 
 
 
-const About = ({  }) => {
+const NationalAccounts = ({  }) => {
   return (
 <StyledDiv>
     <FlexDiv>
         <VertDiv>
-            <Title>Who is<br />North American Plastics?</Title>
-            <Text>Family-owned since the beginning, we are part of a global plastics family including Amari Plastics brands in the UK, Vink Holdings in mainland Europe and MM Plastics in Australia and New Zealand. Learn more about what makes us the best in the industry, while promoting a family-first atmosphere. </Text>
-            
+            <Title>National Accounts</Title>
+            <h2>Learn more about our world class National Accounts program </h2>
         </VertDiv>
         <BannerPicDiv>
-        <Image src={AboutImg}/>
+        <Image src={NA}/>
         </BannerPicDiv>
     </FlexDiv>
 
             <GFlexDiv>
               
-            <IFRAME src="https://www.youtube.com/embed/P5SiP5SPoNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></IFRAME>
+               
                 
                 <GreenDiv>
-                    <Subtitle id="about">Who We Are</Subtitle>
+                    <Subtitle id="about">Welcome</Subtitle>
                 <Text>
-                We are a collection of the plastic distribution industry's top brands. With over 100 locations across North America, we are the largest organization in the plastics industry today. <br/><br/> All of our brands operate independently, excel as experts in their field and are completely customer-focused.
+                North American Plastics is the industry’s leading organization for plastics distribution, and our world class National Accounts program is geared to streamline your company’s 
+                procurement process while providing a high level of customer service and competitive market pricing.
                     </Text>
                     <SmFlexDiv>
-                    
+                  
                     </SmFlexDiv>
             
-                    <IFRAME2 src="https://www.youtube.com/embed/P5SiP5SPoNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></IFRAME2>
+                    
                 </GreenDiv>
             </GFlexDiv>
 
             <FlexDiv>
+           
             <WhiteDiv>
 
-                    <Subtitle>Our Culture</Subtitle>
+                    <Subtitle>Location is Key</Subtitle>
                 <Text>
-                We know our people are our most valuable asset. Our decentralized and empowered business model is a perfect fit for self-motivated, entrepreneurial, and energetic team players who want to be a part of a winning team. Plus, we're family owned, so all of our locations really do feel like family.   
+                With the largest local footprint of facilities in the industry today, we are located where you need your key suppliers to be in order to support today’s fast-paced business environment. Our in-house converting and fabrication capabilities can provide you with materials and the best stage to maximize your company’s productivity and working capital.   
                     </Text>
 
-                    <SmFlexDiv>
-                      <a href="/brands"><GreenButton>View Brands</GreenButton></a>
-                    
-                    </SmFlexDiv>
-
+                   
                 </WhiteDiv>
-                <HalfDiv>
-                <a href="/brands"><Image src={Brands}/></a>
-                </HalfDiv>
-
             </FlexDiv>
 
-    
-    
-          
-            
+            <GFlexDiv>
+                <GreenDiv>
+                    <Subtitle>Top Quality</Subtitle>
+                <Text>
+                We are supported by the top brand name manufacturers in plastics, and bring warehousing, inventory and delivery capabilities to your doorstep.  
+                    </Text>
+                    <SmFlexDiv>
+                    </SmFlexDiv>
 
+                </GreenDiv>
+            </GFlexDiv>
+            <VertDiv>
+              <CenterDiv>
+              
+              <Subtitle>Contact us</Subtitle>
+      
+      <Text>NationalAccounts@NorthAmericanPlastics.com</Text>
+              </CenterDiv>
+            
+            </VertDiv>
 
             
 </StyledDiv>
@@ -81,9 +88,8 @@ justify-content: center;
 const IFRAME = styled.iframe`
 border: none;
 border-radius: 25px;
-width: 50%;
-height:400px; 
-padding: 2rem;
+height:480px; 
+padding: 3rem;
 
 @media screen and (max-width: 860px) {
   height: 300px;
@@ -93,13 +99,11 @@ display: none;}
 
 const IFRAME2 = styled.iframe`
 border: none;
+border-radius: 25px;
 height:480px; 
 display: none;
 padding-top: .5rem;
 padding-bottom: .5rem;
-margin-left: auto;
-margin-right: auto;
-
 
 @media screen and (max-width: 860px) {
   height: 300px;
@@ -109,9 +113,14 @@ margin-right: auto;
 
 const CenterDiv = styled.div`
 text-align: center;
-width: 100%;
 justify-content: center;
 align-items: center;
+width: 100%
+@media screen and (max-width: 860px) {
+  width: 100%;
+  text-align: left;
+  justify-content: left;
+  align-items: left;}
 `;
 
 const HalfDiv = styled.div`
@@ -125,16 +134,9 @@ padding: 2rem;
 
 @media screen and (max-width: 860px) {
   width: 100%;
-  justify-content: center;
-  padding-left: 0;
-  padding-right: 0;
-  }
-
-  @media screen and (max-width: 560px) {
-    
-    text-align: center;
-    justify-content: center;
-    align-items: center;}
+  text-align: left;
+  justify-content: left;
+  align-items: left;}
 `;
 
 const BannerPicDiv = styled.div`
@@ -152,7 +154,8 @@ width: 50%;
 `;
 
 const Image = styled.img`
-  width: 100%;
+  width: 80%;
+  
   
   `
 
@@ -160,9 +163,9 @@ const Image = styled.img`
 
 
 const WhiteDiv = styled.div`
-text-align: left;
-width: 50%;
-justify-content: left;
+text-align: center;
+width: 100%;
+justify-content: center;
 
 @media screen and (max-width: 860px) {
   flex-direction: column;
@@ -222,7 +225,6 @@ background: green;
 color: white;
 height: fit-content;
 margin-right: 1rem;
-cursor: pointer;
 
 `;
 
@@ -240,8 +242,8 @@ margin-right: 1rem;
 
 const Text = styled.p`
 font-size: 1.5rem;
-
-text-align: left;
+text-align: center;
+font-weight: 600;
 padding: 1rem;
 padding-left: 0;
 
@@ -262,7 +264,7 @@ font-size: 1rem;
 `;
 
 const Title = styled.h1`
-font-size: 4rem;
+font-size: 5rem;
 
 @media screen and (max-width: 1200px) {
   font-size: 4rem;}
@@ -276,8 +278,10 @@ font-size: 4rem;
 
 const Subtitle = styled.h1`
 font-size: 4rem;
+text-align: center;
+width: 100%
 @media screen and (max-width: 860px) {
-  font-size: 2.5rem;
+  font-size: 2rem;
 text-align: center}
 
 `;
@@ -329,7 +333,7 @@ margin-bottom: 2rem;
 
 @media screen and (max-width: 860px) {
   justify-content: center;
-  margin-bottom: .5rem;
+  margin-bottom: 2rem;
   }
 
 `;
@@ -350,7 +354,7 @@ const VertDiv = styled.div`
 padding-bottom: 1rem;
 text-align: left;
 justify-content: left;
-width: 50%;
+width: 100%;
 
 
 @media screen and (max-width: 860px) {
@@ -358,4 +362,4 @@ width: 50%;
 width: 100%;}
 
 `;
-export default connect(About);
+export default connect(NationalAccounts);

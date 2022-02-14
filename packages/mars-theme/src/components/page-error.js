@@ -19,7 +19,7 @@ const description = (
 
 // The 404 page component
 const Page404 = ({ state }) => {
-  const data = state.source.get(state.router.link);
+ 
 
   const title = "Oops! Something went wrong";
   const title404 = "Oops! 404";

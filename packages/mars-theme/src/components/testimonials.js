@@ -1,6 +1,10 @@
 import { connect, styled, css } from "frontity";
 import HomePic from "./images/homepic.png";
-import AboutImg from "./images/aboutpageimg.png";
+import NAImg from "./images/NAImg.png";
+import TestimonialPic from "./images/testimonials.png";
+import Careers from "./images/careers.jpg";
+import college from "./images/college.png";
+import CareerImg from "./images/careerimg.png";
 import Brands from "./images/brands.png";
 
 
@@ -8,59 +12,63 @@ import Brands from "./images/brands.png";
 
 
 
-const About = ({  }) => {
+const Testimonials = ({  }) => {
   return (
 <StyledDiv>
     <FlexDiv>
         <VertDiv>
-            <Title>Who is<br />North American Plastics?</Title>
-            <Text>Family-owned since the beginning, we are part of a global plastics family including Amari Plastics brands in the UK, Vink Holdings in mainland Europe and MM Plastics in Australia and New Zealand. Learn more about what makes us the best in the industry, while promoting a family-first atmosphere. </Text>
-            
+            <Title>Join Our Family of Brands</Title>
+            <Text>Read about what leaders in the plastics industry think about our acquisition process. </Text>
+           
         </VertDiv>
         <BannerPicDiv>
-        <Image src={AboutImg}/>
+        <Image src={TestimonialPic}/>
         </BannerPicDiv>
     </FlexDiv>
 
             <GFlexDiv>
               
-            <IFRAME src="https://www.youtube.com/embed/P5SiP5SPoNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></IFRAME>
+               
                 
                 <GreenDiv>
-                    <Subtitle id="about">Who We Are</Subtitle>
+                
+                    <Text><em>Bing J. Carbone, President, Modern Plastics</em></Text>
                 <Text>
-                We are a collection of the plastic distribution industry's top brands. With over 100 locations across North America, we are the largest organization in the plastics industry today. <br/><br/> All of our brands operate independently, excel as experts in their field and are completely customer-focused.
+                For 61-years prior to our acquisition by North American Plastics (NAP), we were a family business, with myself as the third generation President. Modern Plastics was a successful company, but at the same time had both financial and other growth limiting factors with our business.
+
+<br /> <br /> Enter a new era in 2006 within the North American Plastics family of companies, where not only were we allowed to preserve the “brand” and name of the company, but we were highly encouraged to run the business as we see fit with a great deal of autonomy and decision making capability at the local profit center level. The size and power of NAP allowed us to expand into a much larger and modernized structure building, purchase large equipment needed for growth, add inventory, increase personnel, and enter new markets. This set the stage for amazing growth that would never have been possible had we remained a family business.
+
+<br /> <br /> I can attest that after nearly 15-years since our acquisition, this was the single best decision ever made for the employees of Modern Plastics, myself included. Deciding to sell your company is a major decision fraught with emotion, however everything that we were told prior to the sale of Modern Plastics by NAP, was absolutely factual. I have been enabled to run a business with freedom and in a manner that utilizes the full array of resources and market power of NAP in the plastics industry. Best decision ever!
                     </Text>
-                    <SmFlexDiv>
                     
-                    </SmFlexDiv>
             
-                    <IFRAME2 src="https://www.youtube.com/embed/P5SiP5SPoNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></IFRAME2>
+                   
                 </GreenDiv>
+
             </GFlexDiv>
+            
 
             <FlexDiv>
             <WhiteDiv>
-
-                    <Subtitle>Our Culture</Subtitle>
+                   
+                    <Text><em>Gretechen Mohen, CEO, Lehigh Valley Plastics</em></Text>
                 <Text>
-                We know our people are our most valuable asset. Our decentralized and empowered business model is a perfect fit for self-motivated, entrepreneurial, and energetic team players who want to be a part of a winning team. Plus, we're family owned, so all of our locations really do feel like family.   
+                Prior to our being acquired by NAP in March of 2018, Lehigh Valley Plastics (a precision machine shop of highly engineered plastics) was a profitable small business owned and run by management. Over the years we received solicitations of interest but we enjoyed our autonomy and were committed to being our best for our customers and employees. That said, we watched as our industry changed and suppliers went vertical and competitors were bought by PE firms. We knew when the right strategic buyer approached us that we should join them.
+
+                <br /><br />From my first interaction with an NAP executive and through all of the subsequent due diligence discussions, I felt that we were picked by the perfect buyer. Everyone we interacted with was smart, seasoned and respectful. When I stood before our employees and addressed our customers to communicate that we were to be acquired, and that this was the best thing for the business and them, I knew/hoped I was right. I said we would be joining a large company measured by their holdings of similar businesses(lots of experience and leadership), with financial pockets to enable investment in the business, and a business model committed to brand equity and autonomy.
+
+                <br /><br />NAP turned out to be everything we hoped for and more. NAP executives have tremendous experience to learn from and they are a true joy to work with. NAP's commitment to suppliers is the best in the industry for managing and leveraging these relationships. Even during the year we were acquired we made capital investments in the business and were completely supported by NAP in doing so. The NAP business model is set up to do exactly what they say; help a business grow strategically and provide guidance as requested or needed, but allow the brand to continue to function as it knows best for its customers and employees.
+
+                <br /><br />Joining the NAP family is the best thing that could have happened to LVP.
                     </Text>
-
-                    <SmFlexDiv>
-                      <a href="/brands"><GreenButton>View Brands</GreenButton></a>
                     
-                    </SmFlexDiv>
-
+            
+                   
                 </WhiteDiv>
-                <HalfDiv>
-                <a href="/brands"><Image src={Brands}/></a>
-                </HalfDiv>
 
             </FlexDiv>
 
-    
-    
+          
           
             
 
@@ -84,6 +92,7 @@ border-radius: 25px;
 width: 50%;
 height:400px; 
 padding: 2rem;
+margin-right: 2.5rem;
 
 @media screen and (max-width: 860px) {
   height: 300px;
@@ -93,13 +102,11 @@ display: none;}
 
 const IFRAME2 = styled.iframe`
 border: none;
+border-radius: 25px;
 height:480px; 
 display: none;
 padding-top: .5rem;
 padding-bottom: .5rem;
-margin-left: auto;
-margin-right: auto;
-
 
 @media screen and (max-width: 860px) {
   height: 300px;
@@ -128,6 +135,7 @@ padding: 2rem;
   justify-content: center;
   padding-left: 0;
   padding-right: 0;
+  padding-bottom: 0;
   }
 
   @media screen and (max-width: 560px) {
@@ -153,7 +161,12 @@ width: 50%;
 
 const Image = styled.img`
   width: 100%;
-  
+  margin-left: auto;
+    margin-right: auto;
+  @media screen and (max-width: 8px) {
+    width: 50%;
+    
+  }
   `
 
   
@@ -161,12 +174,11 @@ const Image = styled.img`
 
 const WhiteDiv = styled.div`
 text-align: left;
-width: 50%;
 justify-content: left;
+padding: 1rem;
 
 @media screen and (max-width: 860px) {
   flex-direction: column;
-  width: 100%;
 text-align: center;
 justify-content: center}
 
@@ -224,6 +236,7 @@ height: fit-content;
 margin-right: 1rem;
 cursor: pointer;
 
+
 `;
 
 const Button = styled.button`
@@ -235,12 +248,12 @@ background: white;
 color: black;
 height: fit-content;
 margin-right: 1rem;
+cursor: pointer;
 
 `;
 
 const Text = styled.p`
 font-size: 1.5rem;
-
 text-align: left;
 padding: 1rem;
 padding-left: 0;
@@ -262,7 +275,7 @@ font-size: 1rem;
 `;
 
 const Title = styled.h1`
-font-size: 4rem;
+font-size: 5rem;
 
 @media screen and (max-width: 1200px) {
   font-size: 4rem;}
@@ -302,7 +315,7 @@ const GreenDiv = styled.div`
 
 const FlexDiv = styled.div`
 padding-bottom: 0;
-padding-LEFT: 3rem;
+padding-LEFT: 2rem;
 display: flex;
 text-align: center;
 justify-content:left;
@@ -358,4 +371,4 @@ width: 50%;
 width: 100%;}
 
 `;
-export default connect(About);
+export default connect(Testimonials);

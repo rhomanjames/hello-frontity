@@ -2,59 +2,72 @@ import React from 'react'
 import { connect, styled } from "frontity";
 
 
-const Sales = () => {
+const About = () => {
     return (
         <StyledDiv>
-            <Title>National Accounts</Title>
-            <FlexDiv>
+    <FlexDiv>
+        <VertDiv>
+            <Title>Who is<br />North American Plastics?</Title>
+            <h2>Learn more about what makes us the best in the industry, while fostering a family-first atmosphere. </h2>
+        </VertDiv>
+    </FlexDiv>
+
+            <GFlexDiv>
                 <HalfDiv>
-                    <Text>Contact us today at NationalAccounts@NorthAmericanPlastics.com</Text>
-                
                 </HalfDiv>
-                <VertDiv>
-                    <h1>Welcome</h1>
-                <Text>
-                  
-                    </Text>
-                </VertDiv>
-            </FlexDiv>
-            <FlexDiv>
                 <GreenDiv>
-                    <h1>Location. Location. Location.</h1>
+                    <Subtitle>Who we are</Subtitle>
                 <Text>
-                With the largest local footprint of facilities in the industry today, we are located where you need your key suppliers to be in order to support today’s fast-paced business environment. Our in-house converting and fabrication capabilities can provide you with materials and the best stage to maximize your company’s productivity and working capital.
-                    </Text>
-                
-                </GreenDiv>
-            </FlexDiv>
-            <FlexDiv>
-                <HalfDiv>
-                    
-                
-                </HalfDiv>
-                <VertDiv>
-                <h1>Top Quality</h1>
-                <Text>
-                We are supported by the top brand name manufacturers in plastics, and bring warehousing, inventory and delivery capabilities to your doorstep.
-                    </Text>
-                </VertDiv>
-            </FlexDiv>
-            <FlexDiv>
-                <GreenDiv>
-                <h1>Sustainable</h1>
-                <Text>
-                North American Plastics also offers a recycling program to provide a comprehensive sustainable solution that will assist your company in achieving their goals for environmental conservation and waste reduction.
+                We are a collection of the plastic ditribution industry's top brands. With over 100 locations across North America, we are the largest organization in the plastics industry today. <br/><br/> All of our brands operate indepently, excel as experts in their field and are completely customer-focused.
                     </Text>
                 </GreenDiv>
+            </GFlexDiv>
+
+            <FlexDiv>
+            <VertDiv>
+                    <Subtitle>Our Culture</Subtitle>
+                <Text>
+                We know our people are our most valuable asset. Our decentralized and empowered business model is a perfect fit for self-motivated, entrepreneurial, and energetic team players who want to be a part of a winning team. Plus, we're family owned, so all of our locations really do feel like family.   
+                    </Text>
+                    <Div>
+                      <GreenButton>Our brands</GreenButton>
+                      <GreenButton>Acquisitions</GreenButton>
+                    </Div>
+                </VertDiv>
+                <HalfDiv>
+                </HalfDiv>
+
             </FlexDiv>
-                
-                <BigText>
-                   <ULText href="mailto:NationalAccounts@NorthAmericanPlastics.com">Contact us</ULText> today!
-                    </BigText>
+
+            <GFlexDiv>
+                <HalfDiv>
+                </HalfDiv>
+                <GreenDiv>
+                    <Subtitle>Sustainability</Subtitle>
+                <Text>
+                North American Plastics offers a closed loop recycling program to provide a comprehensive sustainable solution that will assist your company in achieving environmental conservation and waste reduction.
+
+                <br/><br/> In addition to this program, our brands offer recycled grade plastics, and lightweight alternatives to traditional materials, saving massively on fuel usage and other processing emissions. The high performance plastics offered by NAP provide a longer life cycle reducing landfill waste. 
+                    </Text>
+
+                </GreenDiv>
+            </GFlexDiv>
+            <VertDiv>
+              <CenterDiv>
+              <Subtitle>Contact us</Subtitle>
+      
+      <Text>For acquisitions, contact <a href="mailto:jaskew@NorthAmericanPlastics.com">Jason Askew</a>. For careers, contact <a href="mailto: avenezia@plasticsfamilyamericas.com">Amy Venezia</a></Text>
+      
+              </CenterDiv>
             
-            </StyledDiv>
+            </VertDiv>
+
+            
+</StyledDiv>
+
     )}
 
+    
     const StyledDiv = styled.div`
     width: 100%;
     text-align: center;
@@ -63,7 +76,7 @@ const Sales = () => {
     `;
     
     const CenterDiv = styled.div`
-
+    padding: 1rem;
     text-align: left;
     justify-content: left;
     align-items: left;
@@ -78,7 +91,7 @@ const Sales = () => {
     @media screen and (max-width: 860px) {
       width: 25%;}
     
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 860px) {
         display: none;}
     
     `;
@@ -273,4 +286,4 @@ const Sales = () => {
     justify-content: left;
     
     `;
-    export default connect(Sales);
+    export default connect(About);

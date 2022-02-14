@@ -1,6 +1,12 @@
 import { connect, styled, css } from "frontity";
 import HomePic from "./images/homepic.png";
-import AboutImg from "./images/aboutpageimg.png";
+import college from "./images/college.png";
+import newcollege from "./images/new-college.png";
+import college1 from "./images/college1.jpeg";
+import college2 from "./images/college2.jpeg";
+import Careers from "./images/careers.jpg";
+import Interns from "./images/interns.jpg";
+import CareerImg from "./images/careerimg.png";
 import Brands from "./images/brands.png";
 
 
@@ -8,59 +14,83 @@ import Brands from "./images/brands.png";
 
 
 
-const About = ({  }) => {
+const College = ({  }) => {
   return (
 <StyledDiv>
     <FlexDiv>
         <VertDiv>
-            <Title>Who is<br />North American Plastics?</Title>
-            <Text>Family-owned since the beginning, we are part of a global plastics family including Amari Plastics brands in the UK, Vink Holdings in mainland Europe and MM Plastics in Australia and New Zealand. Learn more about what makes us the best in the industry, while promoting a family-first atmosphere. </Text>
-            
+            <Title>College Recruitment</Title>
+            <Text>Come for an internship, stay for a career. Our resources for new graduates are curated to ensure success. </Text>
         </VertDiv>
         <BannerPicDiv>
-        <Image src={AboutImg}/>
+        <Image src={college}/>
         </BannerPicDiv>
     </FlexDiv>
 
             <GFlexDiv>
-              
-            <IFRAME src="https://www.youtube.com/embed/P5SiP5SPoNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></IFRAME>
                 
+            <HalfDiv>
+              <Image src={college2}/>
+              </HalfDiv>
                 <GreenDiv>
-                    <Subtitle id="about">Who We Are</Subtitle>
+                    <Subtitle id="about">About us</Subtitle>
                 <Text>
-                We are a collection of the plastic distribution industry's top brands. With over 100 locations across North America, we are the largest organization in the plastics industry today. <br/><br/> All of our brands operate independently, excel as experts in their field and are completely customer-focused.
+                North American Plastics strongly believes our people are our most valuable asset. We look for high performance individuals to create solutions with high performance polymers. It is our aim to offer challenging opportunities, with unlimited growth potential and a chance to service a wide variety of markets across the country.
                     </Text>
-                    <SmFlexDiv>
                     
-                    </SmFlexDiv>
             
-                    <IFRAME2 src="https://www.youtube.com/embed/P5SiP5SPoNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></IFRAME2>
+                   
+                </GreenDiv>
+               
+            </GFlexDiv>
+
+            <FlexDiv>
+            <WhiteDiv>
+
+                    <Subtitle>Paid Internship</Subtitle>
+                <Text>
+                North American Plastics offers a paid internship program in select offices across the United States. We strive to help hard working and driven students develop sales and leadership skills by familiarizing them with both our inside and outside sales programs. This includes speaking with prospective and existing clientele, customer visits, sales cycle education, product training and much more.   
+                    </Text>
+
+                   
+
+                </WhiteDiv>
+                <HalfDiv>
+                <Image src={Interns}/>
+                </HalfDiv>
+
+            </FlexDiv>
+
+            <GFlexDiv>
+                <HalfDiv>
+                  <Image src={college1}/>
+                </HalfDiv>
+                <GreenDiv>
+                    <Subtitle>New Hire Training</Subtitle>
+                <Text>
+                Additionally, we offer an annual new hire training for recent college graduates every summer. This comprises one week of intensive sales training at the corporate offices in Dallas followed by a second week of product training at various manufacturing plants.  
+                    </Text>
+
                 </GreenDiv>
             </GFlexDiv>
 
             <FlexDiv>
             <WhiteDiv>
 
-                    <Subtitle>Our Culture</Subtitle>
+                    <Subtitle>Top Notch</Subtitle>
                 <Text>
-                We know our people are our most valuable asset. Our decentralized and empowered business model is a perfect fit for self-motivated, entrepreneurial, and energetic team players who want to be a part of a winning team. Plus, we're family owned, so all of our locations really do feel like family.   
+                We proudly collaborate and support with top-notch sales programs across the country such as; Florida State University, Utah State University, Texas State University, University of Nebraska Kearney, and California State University, Fullerton.   
                     </Text>
 
                     <SmFlexDiv>
-                      <a href="/brands"><GreenButton>View Brands</GreenButton></a>
-                    
+                      <a href="https://apply.workable.com/north-american-plastics/j/75E5C10204/"><GreenButton>Internship Application</GreenButton></a>
+                      <a href="https://apply.workable.com/north-american-plastics/j/6EE4830B6E/"><GreenButton>Sales Application</GreenButton></a>
                     </SmFlexDiv>
 
                 </WhiteDiv>
-                <HalfDiv>
-                <a href="/brands"><Image src={Brands}/></a>
-                </HalfDiv>
+                <IFRAME width="552" height="311" src="https://www.youtube.com/embed/G_3DfoWgZPc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></IFRAME>
 
             </FlexDiv>
-
-    
-    
           
             
 
@@ -81,29 +111,30 @@ justify-content: center;
 const IFRAME = styled.iframe`
 border: none;
 border-radius: 25px;
-width: 50%;
+margin-right: auto;
+margin-left: auto;
 height:400px; 
 padding: 2rem;
+justify-content: center;
 
 @media screen and (max-width: 860px) {
-  height: 300px;
-display: none;}
+  width: 276px;
+  height: 156px;
+  }
+
+
+
 
 `;
 
 const IFRAME2 = styled.iframe`
 border: none;
+border-radius: 25px;
 height:480px; 
 display: none;
 padding-top: .5rem;
 padding-bottom: .5rem;
-margin-left: auto;
-margin-right: auto;
 
-
-@media screen and (max-width: 860px) {
-  height: 300px;
-   display: block}
 
 `;
 
@@ -222,7 +253,6 @@ background: green;
 color: white;
 height: fit-content;
 margin-right: 1rem;
-cursor: pointer;
 
 `;
 
@@ -240,7 +270,8 @@ margin-right: 1rem;
 
 const Text = styled.p`
 font-size: 1.5rem;
-
+text-align: left;
+font-weight: 600;
 text-align: left;
 padding: 1rem;
 padding-left: 0;
@@ -262,7 +293,7 @@ font-size: 1rem;
 `;
 
 const Title = styled.h1`
-font-size: 4rem;
+font-size: 5rem;
 
 @media screen and (max-width: 1200px) {
   font-size: 4rem;}
@@ -358,4 +389,4 @@ width: 50%;
 width: 100%;}
 
 `;
-export default connect(About);
+export default connect(College);

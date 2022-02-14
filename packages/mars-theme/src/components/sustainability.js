@@ -1,6 +1,8 @@
 import { connect, styled, css } from "frontity";
 import HomePic from "./images/homepic.png";
-import AboutImg from "./images/aboutpageimg.png";
+import Earth from "./images/earth.png";
+import NAImg from "./images/NAImg.png";
+import CareerImg from "./images/careerimg.png";
 import Brands from "./images/brands.png";
 
 
@@ -8,59 +10,62 @@ import Brands from "./images/brands.png";
 
 
 
-const About = ({  }) => {
+const Sustainability = ({  }) => {
   return (
 <StyledDiv>
     <FlexDiv>
-        <VertDiv>
-            <Title>Who is<br />North American Plastics?</Title>
-            <Text>Family-owned since the beginning, we are part of a global plastics family including Amari Plastics brands in the UK, Vink Holdings in mainland Europe and MM Plastics in Australia and New Zealand. Learn more about what makes us the best in the industry, while promoting a family-first atmosphere. </Text>
-            
+        <VertDiv >
+            <Title>Sustainability</Title>
+            <Text>The North American Plastics family of brands is committed to creating a sustainable future.</Text>
+          
         </VertDiv>
         <BannerPicDiv>
-        <Image src={AboutImg}/>
+        <Image src={NAImg}/>
         </BannerPicDiv>
     </FlexDiv>
 
             <GFlexDiv>
               
-            <IFRAME src="https://www.youtube.com/embed/P5SiP5SPoNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></IFRAME>
                 
                 <GreenDiv>
-                    <Subtitle id="about">Who We Are</Subtitle>
+                    <Subtitle id="about">Innovating Sustainable Solutions</Subtitle>
                 <Text>
-                We are a collection of the plastic distribution industry's top brands. With over 100 locations across North America, we are the largest organization in the plastics industry today. <br/><br/> All of our brands operate independently, excel as experts in their field and are completely customer-focused.
+                At North American Plastics, we believe that innovation is the key to a more sustainable future, and we continue to invest in new technologies and programs to enable low- and zero-waste solutions for our industry.
                     </Text>
                     <SmFlexDiv>
-                    
                     </SmFlexDiv>
-            
-                    <IFRAME2 src="https://www.youtube.com/embed/P5SiP5SPoNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></IFRAME2>
                 </GreenDiv>
             </GFlexDiv>
 
             <FlexDiv>
             <WhiteDiv>
 
-                    <Subtitle>Our Culture</Subtitle>
+                    <Subtitle>We Are Committed</Subtitle>
                 <Text>
-                We know our people are our most valuable asset. Our decentralized and empowered business model is a perfect fit for self-motivated, entrepreneurial, and energetic team players who want to be a part of a winning team. Plus, we're family owned, so all of our locations really do feel like family.   
+                From eco-friendly products, recycling programs and solutions made from recycled materials, we consistently strive to seek innovative solutions for a sustainable future.   
                     </Text>
 
-                    <SmFlexDiv>
-                      <a href="/brands"><GreenButton>View Brands</GreenButton></a>
-                    
-                    </SmFlexDiv>
+          
 
                 </WhiteDiv>
                 <HalfDiv>
-                <a href="/brands"><Image src={Brands}/></a>
+                <Image src={Earth}/>
                 </HalfDiv>
 
             </FlexDiv>
 
-    
-    
+            <GFlexDiv>
+                <GreenDiv>
+                    <Subtitle>What We Offer</Subtitle>
+                <Text>
+                North American Plastics offers a closed loop recycling program to provide a comprehensive sustainable solution that will assist companies in achieving environmental conservation and waste reduction.
+
+                <br/><br/> In addition to this program, our brands offer recycled grade plastics, and lightweight alternatives to traditional materials, saving massively on fuel usage and other processing emissions. The high performance plastics offered by NAP provide a longer life cycle reducing landfill waste.   
+                    </Text>
+                    
+
+                </GreenDiv>
+              </GFlexDiv>
           
             
 
@@ -93,13 +98,11 @@ display: none;}
 
 const IFRAME2 = styled.iframe`
 border: none;
+border-radius: 25px;
 height:480px; 
 display: none;
 padding-top: .5rem;
 padding-bottom: .5rem;
-margin-left: auto;
-margin-right: auto;
-
 
 @media screen and (max-width: 860px) {
   height: 300px;
@@ -122,6 +125,7 @@ margin-bottom: auto;
 align-items: right;
 justify-content: right;
 padding: 2rem;
+position: relative;
 
 @media screen and (max-width: 860px) {
   width: 100%;
@@ -142,8 +146,7 @@ text-align: left;
 margin-top: auto;
 margin-bottom: auto;
 align-items: bottom;
-justify-content: right;
-width: 50%;
+width: 100%;
 
 
   @media screen and (max-width: 860px) {
@@ -152,7 +155,16 @@ width: 50%;
 `;
 
 const Image = styled.img`
-  width: 100%;
+  width: 50%;
+  margin-left: auto;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 560px) {
+    width: 50%;
+  }
   
   `
 
@@ -222,7 +234,7 @@ background: green;
 color: white;
 height: fit-content;
 margin-right: 1rem;
-cursor: pointer;
+cursor:pointer;
 
 `;
 
@@ -240,7 +252,6 @@ margin-right: 1rem;
 
 const Text = styled.p`
 font-size: 1.5rem;
-
 text-align: left;
 padding: 1rem;
 padding-left: 0;
@@ -262,7 +273,7 @@ font-size: 1rem;
 `;
 
 const Title = styled.h1`
-font-size: 4rem;
+font-size: 5rem;
 
 @media screen and (max-width: 1200px) {
   font-size: 4rem;}
@@ -287,6 +298,7 @@ const GreenDiv = styled.div`
   text-align: left;
   justify-self: center;
   align-items: center;
+  align-content: center;
   justify-content:center;
   width: 100%;
   color: white;
@@ -311,11 +323,12 @@ position: relative;
 
 @media screen and (max-width: 860px) {
   padding-left: .5rem;
-  flex-direction: column;
+  
   }
 
   @media screen and (max-width: 560px) {
     padding-bottom: 3rem;
+    flex-direction: column;
     }
   
 `;
@@ -358,4 +371,4 @@ width: 50%;
 width: 100%;}
 
 `;
-export default connect(About);
+export default connect(Sustainability);

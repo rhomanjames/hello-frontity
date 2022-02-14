@@ -2,12 +2,24 @@ const settings = {
   "name": "hello-frontity",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "url": "https://northamericanplastics697336576.wordpress.com",
+      "title": "North American Plastics",
+      "description": "North American Plastics"
     }
   },
   "packages": [
+    {
+      "name": "@frontity/google-analytics",
+      "state": {
+        "googleAnalytics": {
+          "trackingId": "UA-181012786-1",
+        },
+        "analytics": {
+          "pageviews": { "googleAnalytics": true },
+          "events": { "googleAnalytics": true }
+        },
+      },
+    },
     {
       "name": "@frontity/mars-theme",
       "state": {
@@ -15,23 +27,23 @@ const settings = {
           "menu": [
             [
               "Home",
-              "/"
+              "/home"
             ],
             [
               "About",
-              "/category/about/"
+              "/about/"
             ],
             [
               "Brands",
-              "/category/travel/"
+              "/brands/"
             ],
             [
               "Career",
               "/career/"
             ],
             [
-              "Sales",
-              "/sales/"
+              "Sustainability",
+              "/sustainability/"
             ]
           ],
           "featured": {

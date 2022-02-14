@@ -1,4 +1,13 @@
-import { connect, styled } from "frontity";
+import { connect, styled, css } from "frontity";
+import HomePic from "./images/homepic.png";
+import Careers from "./images/careers.jpg";
+import college from "./images/college.png";
+import CareerImg from "./images/careerimg.png";
+import Brands from "./images/brands.png";
+
+
+
+
 
 
 const Home = ({  }) => {
@@ -6,68 +15,75 @@ const Home = ({  }) => {
 <StyledDiv>
     <FlexDiv>
         <VertDiv>
-            <Title>Great People <br /> Great Culture</Title>
-            <h2>We're the #1 plastics wholesale distributor in North America for a reason. </h2>
-            <GreenButton ><a href="#about">Learn more</a></GreenButton>
+            <Title>Great People <br/>  Great Culture</Title>
+            <Text>At North American Plastics, we are committed to empowering the entrepreneurial spirit. We are the #1 wholesale distributor of plastics in North America for that reason.</Text>
+            <GreenButton ><a href="#about">Learn More</a></GreenButton>
         </VertDiv>
+        <BannerPicDiv>
+        <Image src={HomePic}/>
+        </BannerPicDiv>
     </FlexDiv>
 
             <GFlexDiv>
-                <HalfDiv>
-                </HalfDiv>
+              
+                <IFRAME src="https://www.google.com/maps/d/u/0/embed?mid=10LYeF0MMbU0CNz3Q_fNoUDj-PZ-zpnG5&ehbc=2E312F" width="100%" border="none"></IFRAME>
+                
                 <GreenDiv>
-                    <Subtitle id="about">About us</Subtitle>
+                    <Subtitle id="about">About Us</Subtitle>
                 <Text>
-                Looking for wholesale plastic? With 16 brands in over 115 locations,  we've got what you need. Whether it’s graphics and signage, transportation or industrial, we're the one-stop-shop for your plastic needs.
+                With over 115 locations, our diverse family of brands provide customers with a wide range of products and services to help their businesses grow. 
                     </Text>
-                    <Button>Learn more</Button>
+                    <SmFlexDiv>
+                    <a href="/about"><Button>Learn More</Button></a>
+                    </SmFlexDiv>
+            
+                    <IFRAME2 src="https://www.google.com/maps/d/u/0/embed?mid=10LYeF0MMbU0CNz3Q_fNoUDj-PZ-zpnG5&ehbc=2E312F" width="100%" border="none"></IFRAME2>
                 </GreenDiv>
             </GFlexDiv>
 
             <FlexDiv>
-            <HalfDiv>
+            <WhiteDiv>
+
                     <Subtitle>Our Brands</Subtitle>
                 <Text>
-                Our team stretches from coast to coast to ensure that all of our customers are treated with personalized care. Our expert team provides the most diverse product offering on the market, so we’re confident that we have what you need when you need it.   
+                Our team stretches from coast to coast to ensure that all of our customers are treated with personalized care. We provide the most diverse product offering on the market, so we’re confident that we have what you need when you need it.   
                     </Text>
+
                     <SmFlexDiv>
-                      <GreenButton>Our brands</GreenButton>
-                      <GreenButton>Acquisitions</GreenButton>
+                    <a href="/brands"><GreenButton>View Brands</GreenButton></a>
+                      
                     </SmFlexDiv>
-                </HalfDiv>
+
+                </WhiteDiv>
                 <HalfDiv>
+                <a href="/brands"><Image src={Brands}/></a>
                 </HalfDiv>
 
             </FlexDiv>
 
             <GFlexDiv>
                 <HalfDiv>
+                  <Image css={css` display: flex; @media screen and (max-width: 860px) {
+display: none;} `} src={CareerImg}/>
                 </HalfDiv>
                 <GreenDiv>
                     <Subtitle>Careers</Subtitle>
                 <Text>
                 See what it’s like to be a part of a winning team. Our commitment to your professional development ensures that you have a clear opportunity for growth within our company.  
                     </Text>
-                    <Button>Join us</Button>
+                    <SmFlexDiv>
+                    <a href="/career"><Button>Join Us</Button></a>
+                    </SmFlexDiv>
+
                 </GreenDiv>
+                <HalfDiv  css={css` display: none; @media screen and (max-width: 860px) {
+display: flex;} `}>
+                  <Image src={CareerImg}/>
+                </HalfDiv>
             </GFlexDiv>
-            <VertDiv>
-              <CenterDiv>
-              <Subtitle>Contact us</Subtitle>
-      
-      <Text>Name</Text>
-      <Input type="text" placeholder="Type here"></Input>
-      
-      
-     
-      <Text>Email Address</Text>
-      <Input type="text" placeholder="Type here"></Input>
-     
-      <Text>Message</Text>
-      <Textarea type="text" placeholder="Type here"></Textarea>
-              </CenterDiv>
+          
             
-            </VertDiv>
+
 
             
 </StyledDiv>
@@ -82,19 +98,99 @@ justify-content: center;
 
 `;
 
+const IFRAME = styled.iframe`
+border: none;
+border-radius: 25px;
+width: 50%;
+height:400px; 
+padding: 2rem;
+margin-right: 2.5rem;
+
+@media screen and (max-width: 860px) {
+  height: 300px;
+display: none;}
+
+`;
+
+const IFRAME2 = styled.iframe`
+border: none;
+border-radius: 25px;
+height:480px; 
+display: none;
+padding-top: .5rem;
+padding-bottom: .5rem;
+
+@media screen and (max-width: 860px) {
+  height: 300px;
+   display: block}
+
+`;
+
 const CenterDiv = styled.div`
+text-align: center;
 width: 100%;
-padding: 1rem;
-text-align: left;
-justify-content: left;
-align-items: left;
+justify-content: center;
+align-items: center;
 `;
 
 const HalfDiv = styled.div`
 text-align: left;
 width: 50%;
-padding: 3rem;
+margin-top: auto;
+margin-bottom: auto;
+align-items: right;
+justify-content: right;
+padding: 2rem;
+
+@media screen and (max-width: 860px) {
+  width: 100%;
+  text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  @media screen and (max-width: 560px) {
+    
+    }
+`;
+
+const BannerPicDiv = styled.div`
+text-align: left;
+margin-top: auto;
+margin-bottom: auto;
+align-items: bottom;
+justify-content: right;
+width: 50%;
+
+
+  @media screen and (max-width: 860px) {
+    display: none;
+  }
+`;
+
+const Image = styled.img`
+  width: 100%;
+  margin-left: auto;
+    margin-right: auto;
+  @media screen and (max-width: 860px) {
+    width: 70%;   
+  }
+  `
+
+  
+
+
+const WhiteDiv = styled.div`
+text-align: left;
+width: 50%;
 justify-content: left;
+
+@media screen and (max-width: 860px) {
+  flex-direction: column;
+  width: 100%;
+text-align: center;
+justify-content: center}
 
 `;
 
@@ -148,6 +244,8 @@ background: green;
 color: white;
 height: fit-content;
 margin-right: 1rem;
+cursor: pointer;
+
 
 `;
 
@@ -160,16 +258,26 @@ background: white;
 color: black;
 height: fit-content;
 margin-right: 1rem;
+cursor: pointer;
 
 `;
 
 const Text = styled.p`
 font-size: 1.5rem;
 text-align: left;
-font-weight:600;
-text-align: left;
+padding: 1rem;
+padding-left: 0;
+
+@media screen and (max-width: 860px) {
+  font-size: 1.25rem;
+text-align:center}
+
+@media screen and (max-width: 560px) {
+  font-size: 1rem;
+text-align:center}
 
 `;
+
 
 const ULText = styled.p`
 font-size: 1rem;
@@ -177,63 +285,100 @@ font-size: 1rem;
 `;
 
 const Title = styled.h1`
-font-size: 5rem;
+font-size: 4rem;
 
+@media screen and (max-width: 1200px) {
+  font-size: 4rem;}
+
+@media screen and (max-width: 860px) {
+  font-size: 3rem;}
+
+  @media screen and (max-width: 560px) {
+    font-size: 3rem;}
 `;
 
 const Subtitle = styled.h1`
 font-size: 4rem;
+@media screen and (max-width: 860px) {
+  font-size: 2.5rem;
+text-align: center}
 
 `;
 
 const GreenDiv = styled.div`
   
-  padding: 2rem;
   text-align: left;
   justify-self: center;
   align-items: center;
   justify-content:center;
-  width: 50%;
+  width: 100%;
   color: white;
   height: fit-content;
   background: green;
+
+  @media screen and (max-width: 860px) {
+    width: 100%;
+    padding: 10px;
 
   
 `;
 
 const FlexDiv = styled.div`
-padding-top: 3rem;
-padding-bottom: 3rem;
+padding-bottom: 0;
 padding-LEFT: 3rem;
 display: flex;
 text-align: center;
 justify-content:left;
+background-size: cover;
+position: relative;
 
+@media screen and (max-width: 860px) {
+  padding-left: .5rem;
+  flex-direction: column;
+  }
+
+  @media screen and (max-width: 560px) {
+    padding-bottom: 3rem;
+    }
+  
 `;
 
 const SmFlexDiv = styled.div`
 display: flex;
 text-align: center;
 justify-content:left;
+width: 100%;
+margin-bottom: 2rem;
+
+@media screen and (max-width: 860px) {
+  justify-content: center;
+  margin-bottom: .5rem;
+  }
 
 `;
 
 const GFlexDiv = styled.div`
 
-padding: 4rem;
+padding: 2rem;
 display: flex;
 text-align: center;
 justify-content:left;
 background: green;
-
+@media screen and (max-width: 860px) {
+flex-direction: column}
 `;
 
 
 const VertDiv = styled.div`
-width: 100%;
-padding: 1rem;
+padding-bottom: 1rem;
 text-align: left;
 justify-content: left;
+width: 50%;
+
+
+@media screen and (max-width: 860px) {
+  text-align:center;
+width: 100%;}
 
 `;
 export default connect(Home);

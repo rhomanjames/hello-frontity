@@ -1,26 +1,22 @@
 import { Global, css, connect, styled, Head } from "frontity";
-import Favicon from 'react-favicon'
 import Switch from "@frontity/components/switch";
 import Header from "./header";
 import Footer from "./footer";
+import List from "./list";
+import Post from "./post";
 import Home from "./home";
 import Brands from "./brands";
 import College from "./college";
 import Laird from "./laird";
-import Sustainability from "./sustainability";
+import NationalAccounts from "./nationalaccounts";
 import Lairdplastics from "./lairdplastics";
 import ModernPlastics from "./modern-plastics";
-import AIAPlastics from "./aia-plastics";
-import EPlastics from "./eplastics";
 import CalsakPlastics from "./calsakplastics";
 import PlasticProducts from "./plastic-products";
 import PVCTechPlastics from "./PVC-tech";
-import USCutter from "./us-cutter";
 import FarcoPlastics from "./farco-plastics";
-import PortPlastics from "./port-plastics";
 import RMIPlastics from "./rmi-plastics";
 import LehighValley from "./lvp";
-import Testimonials from "./testimonials";
 import EPP from "./EPP";
 import HartSupply from "./hart-supply";
 import EMPlastics from "./emplastic";
@@ -56,7 +52,6 @@ const Theme = ({ state }) => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
-
         <html lang="en" />
       </Head>
 
@@ -66,7 +61,6 @@ const Theme = ({ state }) => {
 
       {/* Add the header of the site. */}
       <HeadContainer>
-      <Favicon url='https://res.cloudinary.com/usamobileappsllc/image/upload/v1643371902/Untitled_design_24_b72ebd.png' />
         <Header />
       </HeadContainer>
 
@@ -76,36 +70,26 @@ const Theme = ({ state }) => {
         <Switch>
           <Loading when={data.isFetching} />
           <Home when={data.isHome} />
-          <Home when={state.router.link=='/locations/'} />
-          <Home when={state.router.link=='/products-01/'} />
-          <Home when={state.router.link=='/products-solutions/'} />
           <Career when={state.router.link=='/career/'} />
-          <Career when={state.router.link=='/careers/'} />
-          <Career when={state.router.link=='/career/#jobs'} />
           <Brands when={state.router.link=='/brands/'} />
+          <Laird when={state.router.link=='/laird/'} />
+          <Sales when={state.router.link=='/sales/'} />
           <EMPlastics when={state.router.link=='/em-plastic/'} />
           <ModernPlastics when={state.router.link=='/modern-plastics/'} />
           <CalsakPlastics when={state.router.link=='/calsak-plastics/'} />
           <RMIPlastics when={state.router.link=='/rmi-plastics/'} />
           <HartSupply when={state.router.link=='/hart-supply/'} />
           <FarcoPlastics when={state.router.link=='/farco-plastics/'} />
-          <PortPlastics when={state.router.link=='/port-plastics/'} />
           <PVCTechPlastics when={state.router.link=='/pvc-tech/'} />
           <PlasticProducts when={state.router.link=='/plastic-products/'} />
-          <USCutter when={state.router.link=='/uscutter/'} />
-          <EPlastics when={state.router.link=='/eplastics/'} />
-          <AIAPlastics when={state.router.link=='/aia-plastics/'} />
           <LehighValley when={state.router.link=='/lehigh-valley-plastics/'} />
           <College when={state.router.link=='/college/'} />
-          <College when={state.router.link=='/college-recruitment/'} />
           <About when={state.router.link=='/about/'} />
-          <About when={state.router.link=='/company/'} />
-          <About when={state.router.link=='/history/'} />
-          <About when={state.router.link=='/who-is-north-american-plastics/'} />
           <EPP when={state.router.link=='/epp/'} />
-          <Testimonials when={state.router.link=='/testimonials/'} />
           <Lairdplastics when={state.router.link=='/laird-plastics/'} />
-          <Sustainability when={state.router.link=='/sustainability/'} />
+          <NationalAccounts when={state.router.link=='/nationalaccounts/'} />
+          <List when={data.isArchive} />
+          <Post when={data.isPostType} />
           <PageError when={data.isError} />
         </Switch>
       </Main>

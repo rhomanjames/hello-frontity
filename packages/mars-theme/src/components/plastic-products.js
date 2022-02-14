@@ -1,6 +1,9 @@
 import { connect, styled, css } from "frontity";
 import HomePic from "./images/homepic.png";
-import AboutImg from "./images/aboutpageimg.png";
+import Careers from "./images/careers.jpg";
+import Lairdpic from "./images/laird.png";
+import BrandPageImg from "./images/brandpageimg.png";
+import CareerImg from "./images/careerimg.png";
 import Brands from "./images/brands.png";
 
 
@@ -8,63 +11,31 @@ import Brands from "./images/brands.png";
 
 
 
-const About = ({  }) => {
+const PlasticProducts = ({  }) => {
   return (
 <StyledDiv>
     <FlexDiv>
         <VertDiv>
-            <Title>Who is<br />North American Plastics?</Title>
-            <Text>Family-owned since the beginning, we are part of a global plastics family including Amari Plastics brands in the UK, Vink Holdings in mainland Europe and MM Plastics in Australia and New Zealand. Learn more about what makes us the best in the industry, while promoting a family-first atmosphere. </Text>
-            
+            <Title>Plastic Products</Title>
         </VertDiv>
-        <BannerPicDiv>
-        <Image src={AboutImg}/>
-        </BannerPicDiv>
     </FlexDiv>
 
             <GFlexDiv>
               
-            <IFRAME src="https://www.youtube.com/embed/P5SiP5SPoNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></IFRAME>
                 
                 <GreenDiv>
-                    <Subtitle id="about">Who We Are</Subtitle>
+                    <Subtitle id="about">About us</Subtitle>
                 <Text>
-                We are a collection of the plastic distribution industry's top brands. With over 100 locations across North America, we are the largest organization in the plastics industry today. <br/><br/> All of our brands operate independently, excel as experts in their field and are completely customer-focused.
+                Plastic Products is a graphic distributor and converter of printable plastic films and substrates for digital, large format, offset, and screen printing. We stock a wide range of materials in a variety of thicknesses and sizes in both sheet and roll form. We represent the best supplier brands in the industry and have a seasoned staff with vast knowledge of handling, conversion and packaging, which ensures the quality and service you desire for press ready orders. We are conveniently located in Dayton Ohio at the crossroads of Interstate 75 and Interstate 70.
                     </Text>
                     <SmFlexDiv>
-                    
+                      <a href="https://www.plasticproductsusa.com/"><Button>Visit Website</Button></a>
                     </SmFlexDiv>
-            
-                    <IFRAME2 src="https://www.youtube.com/embed/P5SiP5SPoNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></IFRAME2>
                 </GreenDiv>
             </GFlexDiv>
-
-            <FlexDiv>
-            <WhiteDiv>
-
-                    <Subtitle>Our Culture</Subtitle>
-                <Text>
-                We know our people are our most valuable asset. Our decentralized and empowered business model is a perfect fit for self-motivated, entrepreneurial, and energetic team players who want to be a part of a winning team. Plus, we're family owned, so all of our locations really do feel like family.   
-                    </Text>
-
-                    <SmFlexDiv>
-                      <a href="/brands"><GreenButton>View Brands</GreenButton></a>
-                    
-                    </SmFlexDiv>
-
-                </WhiteDiv>
-                <HalfDiv>
-                <a href="/brands"><Image src={Brands}/></a>
-                </HalfDiv>
-
-            </FlexDiv>
-
-    
-    
-          
             
 
-
+        
             
 </StyledDiv>
 
@@ -93,13 +64,11 @@ display: none;}
 
 const IFRAME2 = styled.iframe`
 border: none;
+border-radius: 25px;
 height:480px; 
 display: none;
 padding-top: .5rem;
 padding-bottom: .5rem;
-margin-left: auto;
-margin-right: auto;
-
 
 @media screen and (max-width: 860px) {
   height: 300px;
@@ -152,7 +121,7 @@ width: 50%;
 `;
 
 const Image = styled.img`
-  width: 100%;
+  width: 50%;
   
   `
 
@@ -218,11 +187,10 @@ font-size: 1rem;
 border: none;
 padding: .75rem;
 border-radius: 25px;
-background: green;
+background: #013F89;
 color: white;
 height: fit-content;
 margin-right: 1rem;
-cursor: pointer;
 
 `;
 
@@ -240,7 +208,8 @@ margin-right: 1rem;
 
 const Text = styled.p`
 font-size: 1.5rem;
-
+text-align: left;
+font-weight: 600;
 text-align: left;
 padding: 1rem;
 padding-left: 0;
@@ -262,7 +231,7 @@ font-size: 1rem;
 `;
 
 const Title = styled.h1`
-font-size: 4rem;
+font-size: 5rem;
 
 @media screen and (max-width: 1200px) {
   font-size: 4rem;}
@@ -291,7 +260,7 @@ const GreenDiv = styled.div`
   width: 100%;
   color: white;
   height: fit-content;
-  background: green;
+  background: #013F89;
 
   @media screen and (max-width: 860px) {
     width: 100%;
@@ -340,7 +309,7 @@ padding: 2rem;
 display: flex;
 text-align: center;
 justify-content:left;
-background: green;
+background: #013F89;
 @media screen and (max-width: 860px) {
 flex-direction: column}
 `;
@@ -358,4 +327,4 @@ width: 50%;
 width: 100%;}
 
 `;
-export default connect(About);
+export default connect(PlasticProducts);

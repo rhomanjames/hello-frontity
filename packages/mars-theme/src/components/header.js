@@ -8,12 +8,11 @@ const Header = ({ state }) => {
   return (
     <>
       <Container>
-        <StyledLink link="/">
-        <Logo src={NAP} />
+        
+        <a href="/"><Logo src={NAP} /></a>
           <Nav />
-          <MobileMenu />
-        </StyledLink>
-  
+        
+
       </Container>
     
     </>
@@ -28,16 +27,18 @@ const Container = styled.div`
   max-width: 100%;
   box-sizing: border-box;
   background-color: white;
-  padding: 3rem;
+  padding: 2rem;
   color: black;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 `;
 
 const Logo = styled.img`
   width: 300px;
-  height: auto
+  height: 55px;
+  @media screen and (max-width: 560px) {
+    width: 150px;
+  height: 22.5px;}
   
 `;
 
