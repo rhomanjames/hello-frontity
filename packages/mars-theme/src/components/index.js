@@ -6,6 +6,7 @@ import Footer from "./footer";
 import Home from "./home";
 import Brands from "./brands";
 import College from "./college";
+import Xml_data from "./XML";
 import Laird from "./laird";
 import Sustainability from "./sustainability";
 import Lairdplastics from "./lairdplastics";
@@ -105,6 +106,7 @@ const Theme = ({ state }) => {
           <EPP when={state.router.link=='/epp/'} />
           <Testimonials when={state.router.link=='/testimonials/'} />
           <Lairdplastics when={state.router.link=='/laird-plastics/'} />
+          <Xml_data when={state.router.link=='/sitemap.xml/'} />
           <Sustainability when={state.router.link=='/sustainability/'} />
           <PageError when={data.isError} />
         </Switch>

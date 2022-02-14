@@ -106,7 +106,6 @@ const StyledDiv = styled.div`
 
 const Card = styled.div`
   height: 200px;
-  width: 200px;
   margin-left: auto;
   margin-right: auto;
   background: white;
@@ -191,6 +190,7 @@ const FlexDiv = styled.div`
   padding-left: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
   text-align: center;
   align-items: center;
   max-width: 100%;

@@ -591,7 +591,7 @@ const Image = styled.img`
   `
 
 const BannerPicDiv = styled.div`
-width: 100%;
+height: 100%;
 
 
   @media screen and (max-width: 860px) {
@@ -639,6 +639,7 @@ const TopVertDiv = styled.div`
   align-items: center;
   padding-top: .5rem;
   padding: 2rem;
+  width: 25%;
 
 
   @media screen and (max-width: 860px) {
