@@ -155,7 +155,7 @@ width: 100%;
 `;
 
 const Image = styled.img`
-  width: 50%;
+  width: 100%;
   margin-left: auto;
 
   @media screen and (max-width: 1200px) {
@@ -187,7 +187,7 @@ justify-content: center}
 const Textarea = styled.textarea`
 padding: 1rem;
 border-radius: 25px;
-border: none;
+border: none;s
 width: 25%;
 height: 50px;
 

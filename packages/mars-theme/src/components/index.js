@@ -34,6 +34,7 @@ import PageError from "./page-error";
 import hartSupply from "./hart-supply";
 import PVCTech from "./PVC-tech";
 
+
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
@@ -106,7 +107,7 @@ const Theme = ({ state }) => {
           <EPP when={state.router.link=='/epp/'} />
           <Testimonials when={state.router.link=='/testimonials/'} />
           <Lairdplastics when={state.router.link=='/laird-plastics/'} />
-          <Xml_data when={state.router.link=='/sitemap.xml/'} />
+          <Xml_data when={state.router.link=='/sitemap.xml/'}  />
           <Sustainability when={state.router.link=='/sustainability/'} />
           <PageError when={data.isError} />
         </Switch>

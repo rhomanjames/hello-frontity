@@ -531,8 +531,9 @@ const StyledDiv = styled.div`
   text-align: left;
   justify-content: left;
   position: relative;
-  padding-top: 1rem;
   padding-bottom: 1rem;
+  padding-top: 1rem;
+
 
   @media screen and (max-width: 860px) {
     flex-direction: column;
@@ -551,6 +552,7 @@ background: green;
 color: white;
 height: fit-content;
 margin-right: 1rem;
+margin-bottom: 1rem;
 margin-left: auto;
 cursor: pointer;
 
@@ -564,10 +566,9 @@ cursor: pointer;
 `;
 
 const FlexDiv = styled.div`
-  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   display: flex;
-  text-align: center;
-  justify-content: center;
  
 
   @media screen and (max-width: 860px) {
@@ -601,16 +602,16 @@ height: 100%;
 
 
 const Text = styled.p`
-font-size: 1.5rem;
+font-size: 1rem;
 text-align: left;
 
 
 @media screen and (max-width: 860px) {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 text-align:center}
 
 @media screen and (max-width: 560px) {
-  font-size: 1rem;
+  font-size: 1.5rem;
 text-align:center}
 
 `;
@@ -634,16 +635,14 @@ const VertDiv = styled.div`
 
 const TopVertDiv = styled.div`
 
-  text-align: left;
-  justify-content:center;
-  align-items: center;
-  padding-top: .5rem;
-  padding: 2rem;
-  width: 25%;
+padding-bottom: 1rem;
+text-align: left;
+justify-content: left;
+width: 50%;
 
 
   @media screen and (max-width: 860px) {
-   
+    width: 100%;
     text-align: center;
     padding: .5rem;
   justify-content:center;
@@ -697,7 +696,6 @@ const GreenDiv = styled.div`
 `;
 
 const Title = styled.h1`
-margin-top: 4rem;
 font-size: 5rem;
 color: black;
 
